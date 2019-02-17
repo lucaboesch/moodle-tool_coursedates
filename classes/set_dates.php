@@ -44,8 +44,9 @@ class set_dates {
      *
      * @param stdClass $course
      * @param stdClass $data
+     * @param bool $keepexisting
      */
-    public static function maybe_alter_course_dates($course, $data) {
+    public static function maybe_alter_course_dates($course, $data, $keepexisting = 0) {
         if (!$course->can_edit()) {
             return;
         }
